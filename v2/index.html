@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="confessions">
+
+<head>
+  <!-- SCROLLS -->
+ <link href="res/stylesheet.css" rel="stylesheet" type="text/css" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="res/app.js"></script>
+  <script src="res/controllers.js"></script>
+</head>
+
+<body>
+
+    <div id="nav" ng-controller="NavController">
+
+      <ul>
+        <li><a ng-class="{active: isActive('/post')}" href="#post">Post</a></li>
+        <li><a ng-class="{active: isActive('/messages')}" href="#messages">Confessions</a></li>
+        <li><a ng-class="{active: isActive('/rules')}" href="#rules">Rules</a></li>
+        <li><a ng-class="{active: isActive('/about')}" href="#about">About</a></li>
+        <li><a ng-class="{active: isActive('/contact')}" href="#contact">Contact</a></li>
+        <li>
+                        <div class="searchbox" align="right">
+                        <form>
+                            <span><input type="text" class="searchtext"><input type="button" value="Fix This Search Simba"></span>
+                        </form>
+                        </div>
+                    </li>
+      </ul>
+    </div>
+
+    <div style="z-index:1;" ng-view></div>
+</body>
+
+</html>
