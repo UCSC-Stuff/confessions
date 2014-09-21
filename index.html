@@ -17,21 +17,30 @@
 <body>
 
     <div id="nav" ng-controller="NavController">
-
-      <ul>
+<nav>
+	<ul>
         <li><a ng-class="{active: isActive('/post')}" href="#post">Post</a></li>
         <li><a ng-class="{active: isActive('/messages')}" href="#messages">Confessions</a></li>
         <li><a ng-class="{active: isActive('/rules')}" href="#rules">Rules</a></li>
         <li><a ng-class="{active: isActive('/about')}" href="#about">About</a></li>
         <li><a ng-class="{active: isActive('/contact')}" href="#contact">Contact</a></li>
         <li>
-                        <div class="searchbox" align="right">
-                        <form>
-                            <span><input type="text" class="searchtext"><input type="button" value="Fix This Search Simba"></span>
-                        </form>
-                        </div>
-                    </li>
-      </ul>
+        	<div class="searchbox" align="right">
+				<form><span>
+		<input type="text" class="searchtext"><input type="button" value="Fix This Search Simba">
+        		</span></form>
+			</div>
+		</li>
+	</ul>
+    <div align="center" class="center">
+	<select name="dropnav" onchange="location = this.options[this.selectedIndex].value;">
+    <option value="#post" selected="selected">Post Confessions</option> 
+    <option value="#messages">Confessions</option> 
+    <option value="#rules">Rules</option> 
+    <option value="#about">About</option> 
+    <option value="#contact">Contact</option> 
+  </select> 
+</nav> </div>
     </div>
 
     <div style="z-index:1;" ng-view></div>
