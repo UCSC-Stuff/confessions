@@ -1,9 +1,19 @@
 var confessionControllers = angular.module('confessionControllers', []);
 
-confessionControllers.controller('postController', function($scope) {
+confessionControllers.controller('postController', function($scope, $http) {
 	$scope.confession = "";
 	$scope.postConfession = function() {
-		alert($scope.confession);
-		$scope.confession="";
+		var post = $http({
+			method: "post",
+			url: "/post",
+			params: {
+				confession: $scope.confession
+			}
+		});
+		post.then(function(){
+			$scope.confession="";
+		}, function() {
+			$scope.confession="ERROR";
+		});
 	};
 });
