@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body {
+min-height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url(slug_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 100% 50px;
+    background-color: #333333;
+}
+
+/*------begin top nav and search------*/
+#nav {
+	position:fixed;
+	z-index: 1;
+    height: 50px;
+	top: 0;
+	width: 100%;
+    background-color: #333333;
+}
+
+#nav ul {
+    list-style: none;
+    width: 950px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#nav li a{
+    float: left;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #069;
+    height: 20px;
+}
+
+#nav li a:hover {
+    color: #FF0;
+    background-color: #ADAE9B;
+}
+
+#nav li a.active {
+    color: #FF0;
+    background-color: #ADAE9B;
+}
+
+.searchbox{
+    display: block;
+    padding: 15px 15px;
+    height: 20px;
+}
+nav select {
+	display: none;
+}
+/*------end top nav and search------*/
+
+
+/*bluebox*/
+.blueishwhite {
+	z-index=1;
+    display: block;
+	background-color: #DDE6E6;
+    opacity: 0.9;
+    width: 50%;
+	min-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 8%;
+    height: 80%;
+	min-height:550px;
+	padding-top: 2%;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+.blueishwhitetext {
+    display: block;
+	background-color: #DDE6E6;
+    opacity: 0.9;
+    width: 45%;
+	min-width: 200px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right:auto;
+	min-height:400px;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:14px;
+	margin-bottom:8%;
+}
+
+
+/*homepage style*/
+.homepage{
+}
+
+div textarea{
+	display: block;
+    resize: none;
+    outline: none;
+    height: 300px;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    opacity: .8;
+    background-image: url(boxbg.gif);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    width:85%;
+	margin: auto;
+}
+
+button {
+    padding:7.5px 30px; 
+	background:#ccc; border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	/*Transition*/
+	-webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+	-ms-transition: All 0.5s ease;
+	transition: All 0.5s ease;
+}
+
+button:hover {
+	background-color:#999;
+	color:#FFF
+}
+
+
+/*Confessions page style*/
+.confessionpage{
+	padding: 2.5% 10%;
+}
+
+/*Rules page style*/
+.rulespage{
+	padding: 2.5% 10%;
+}
+
+/*About page style*/
+.aboutpage{
+	padding: 2.5% 10%;
+}
+
+/*Contact us page style*/
+.contactpage{
+	padding: 2.5% 10%;
+}
+
+/*util classes*/
+.center{
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:12px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/*BEGIN MOBILE STUFF!!*/
+@media only screen and (max-width: 1000px), only screen and (max-device-width: 1000px) {
+nav ul{ 
+	display: none; 
+}
+nav select{ 
+	display: inline-block;
+    padding:auto;
+	width: 50%;
+	height: 30px;
+	font-size:16px;
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+    background-image: url(dropdown.png);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+}
+  
+.blueishwhite {
+	z-index=1;
+    display: block;
+	background-color: #DDE6E6;
+    opacity: 0.9;
+    width: 90%;
+	min-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	min-height:400px;
+	margin-bottom:8%;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+.blueishwhitetext {
+    display: block;
+	background-color: #DDE6E6;
+    opacity: 0.9;
+    width: 90%;
+	min-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	min-height:400px;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:14px;
+	margin-bottom:8%;
+}
+button {
+    padding:20px 55px;
+}
+}
