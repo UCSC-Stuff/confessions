@@ -12,6 +12,7 @@ confessionControllers.controller('postController', function($scope, $http) {
 		});
 		post.then(function(){
 			$scope.confession="";
+			alert("Thank you for your submission!");
 		}, function() {
 			$scope.confession="ERROR";
 		});
