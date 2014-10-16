@@ -36,6 +36,8 @@ confessionControllers.controller('searchController', function($scope, $http) {
 			$scope.results = data.data;
 			if(data.data.length != 25){
 				$scope.moreResults = false;
+			}else{
+				$scope.moreResults = true;
 			}
 			i = 1;
 		});
