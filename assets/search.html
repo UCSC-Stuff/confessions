@@ -1,0 +1,6 @@
+<div class="blueishwhite">
+	<textarea class="center" style="margin-top: 10px; margin-bottom: 10px;" cols="80" enter-submit="search()" ng-model="query" ng-enter="alertTest()"></textarea>
+	<button class="center" ng-click="search()">Submit</button>
+	<div ng-repeat="result in results"><a class="searchresult" href="https://www.facebook.com/UCSCConfessions/posts/{{result.id}}" target="_blank">{{result.confession}}</a></div>
+	<button class="center" ng-show="moreResults" style="margin-bottom:15px;" ng-click="appendSearch()">View More</button>
+</div>

@@ -13,13 +13,15 @@ confessionsApp.config(['$routeProvider',
 					templateUrl: '/res/post.html',
 					controller: 'postController'
 				}).
+				when('/search', {
+					templateUrl: '/res/search.html',
+					controller: 'searchController'
+				}).
 				when('/rules', {
 					templateUrl: '/res/rules.html',
-					controller: 'postController'
 				}).
 				when('/about', {
 					templateUrl: '/res/about.html',
-					controller: 'postController'
 				}).
 				otherwise({
 					redirectTo: '/post'
